@@ -2,8 +2,9 @@
 
 > A calculator built with React
 
-![screenshot](./screenshot.png)
+## Live Link
 
+[Open Live](https://react-calc-master-2021.herokuapp.com/)
 
 ## Built With
 
