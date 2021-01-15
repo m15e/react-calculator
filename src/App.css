@@ -34,6 +34,15 @@ img {
   height: auto;
 }
 
+<<<<<<< HEAD
+=======
+.App {
+  width: 400px;
+  margin: 5vh auto;
+  background-color: #000;
+}
+
+>>>>>>> f4a5144543f7b3ded83746a70aaaa8d52cd6c542
 .display {
   color: #fff;
   text-align: right;
@@ -48,5 +57,9 @@ img {
 }
 
 .btn-group:last-of-type button:first-of-type {
+<<<<<<< HEAD
   width: 215%;
+=======
+  width: 203.5%;
+>>>>>>> f4a5144543f7b3ded83746a70aaaa8d52cd6c542
 }
