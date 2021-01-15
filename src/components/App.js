@@ -1,7 +1,8 @@
 import '../App.css';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
-import calculate from '../logic/calculate';
+// Line below is commented out as it is a project requirement that throws a linter error
+// import calculate from '../logic/calculate';
 
 function App() {
   return (
