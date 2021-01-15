@@ -1,15 +1,18 @@
-import Big from 'big.js'
+import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
-  if (operation == "X") {
-    return Big(numberOne) * Big(numberTwo)
-  } else if (operation == "÷") {
-    return Big(numberOne) / Big(numberTwo)
-  } else if (operation == "+") {
-    return Big(numberOne) + Big(numberTwo)
-  } else if (operation == "-") {
-    return Big(numberOne) - Big(numberTwo)
+  let res;
+  if (operation === 'X') {
+    res = Big(numberOne) * Big(numberTwo);
+  } if (operation === '÷') {
+    res = Big(numberOne) / Big(numberTwo);
+  } if (operation === '+') {
+    res = Big(numberOne) + Big(numberTwo);
+  } if (operation === '-') {
+    res = Big(numberOne) - Big(numberTwo);
   }
+
+  return res;
 };
 
 export default operate;

@@ -1,34 +1,34 @@
 import operate from './operate';
 
 const calculate = (calculatorData, buttonName) => {
-  const { total, next, operation } = calculatorData
+  const dataUpdate = { ...calculatorData };
 
-  if (buttonName === "AC") {
-    total = null;
-    next = null;
-    operation = null;
+  if (buttonName === 'AC') {
+    dataUpdate.total = null;
+    dataUpdate.next = null;
+    dataUpdate.operation = null;
   }
 
-  if (buttonName === "+/-") {
-    total *= -1
-    if (next) { next *= -1 }
+  if (buttonName === '+/-') {
+    dataUpdate.total *= -1;
+    if (dataUpdate.next) { dataUpdate.next *= -1; }
   }
 
   if (buttonName === '%') {
-    if (!next) {
-      total = operate(total, 100, '÷')
+    if (!dataUpdate.next) {
+      dataUpdate.total = operate(dataUpdate.total, 100, '÷');
     }
   }
 
-  if (!operation && (buttonName === 'X' || buttonName === '÷' || buttonName === '+' || buttonName === '-')) {
-    operation = buttonName
+  if (!dataUpdate.operation && (buttonName === 'X' || buttonName === '÷' || buttonName === '+' || buttonName === '-')) {
+    dataUpdate.operation = buttonName;
   }
 
-  if (buttonName === '=' && next) {
-    total = operate(total, next, operation)
+  if (buttonName === '=' && dataUpdate.next) {
+    dataUpdate.total = operate(dataUpdate.total, dataUpdate.next, dataUpdate.operation);
   }
 
-  return calculatorData
+  return dataUpdate;
 };
 
 export default calculate;
