@@ -3,33 +3,19 @@ import Button from './Button';
 const ButtonPanel = () => (
   <div>
     <div className="btn-group">
-      <Button buttonName="AC" />
-      <Button buttonName="+/-" />
-      <Button buttonName="%" />
-      <Button buttonName="÷" />
+      {['AC', '+/-', '%', '÷'].map(el => (<Button key={el[0]} buttonName={el} />))}
     </div>
     <div className="btn-group">
-      <Button buttonName="7" />
-      <Button buttonName="8" />
-      <Button buttonName="9" />
-      <Button buttonName="X" />
+      {['7', '8', '9', 'X'].map(el => (<Button key={el[0]} buttonName={el} />))}
     </div>
     <div className="btn-group">
-      <Button buttonName="4" />
-      <Button buttonName="5" />
-      <Button buttonName="6" />
-      <Button buttonName="-" />
+      {['4', '5', '6', '-'].map(el => (<Button key={el[0]} buttonName={el} />))}
     </div>
     <div className="btn-group">
-      <Button buttonName="1" />
-      <Button buttonName="2" />
-      <Button buttonName="3" />
-      <Button buttonName="+" />
+      {['1', '2', '3', '+'].map(el => (<Button key={el[0]} buttonName={el} />))}
     </div>
     <div className="btn-group">
-      <Button buttonName="0" />
-      <Button buttonName="." />
-      <Button buttonName="=" />
+      {['0', '.', '='].map(el => (<Button key={el[0]} buttonName={el} />))}
     </div>
   </div>
 );
