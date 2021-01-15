@@ -33,3 +33,20 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.display {
+  color: #fff;
+  text-align: right;
+}
+
+.btn-group {
+  display: flex;
+}
+
+.btn-group button {
+  width: 100%;
+}
+
+.btn-group:last-of-type button:first-of-type {
+  width: 215%;
+}

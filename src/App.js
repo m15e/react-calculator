@@ -1,14 +1,15 @@
-import './App.css';
+import '../App.css';
+import Display from './Display';
+import ButtonPanel from './ButtonPanel';
+// Line below is commented out as it is a project requirement that throws a linter error
+// import calculate from '../logic/calculate';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Hello Calculator
-        </p>
-      </header>
-    </div>
+    <>
+      <Display result="12" />
+      <ButtonPanel />
+    </>
   );
 }
 
