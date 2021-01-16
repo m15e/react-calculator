@@ -2,7 +2,7 @@ import '../App.css';
 import React from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
-// import calculate from '../logic/calculate';
+import calculate from '../logic/calculate';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,8 +16,9 @@ class App extends React.Component {
     this.clickHandler = this.clickHandler.bind(this);
   }
 
-  clickHandler() {
-    return console.log(this.state);
+  clickHandler(buttonName) {
+    console.log(buttonName);
+    this.setState(state => calculate(state, buttonName));
   }
 
   render() {

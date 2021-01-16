@@ -28,6 +28,8 @@ const calculate = (calculatorData, buttonName) => {
     dataUpdate.total = operate(dataUpdate.total, dataUpdate.next, dataUpdate.operation);
   }
 
+  console.log(dataUpdate);
+
   return dataUpdate;
 };
 
