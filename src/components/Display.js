@@ -15,14 +15,14 @@ Display.defaultProps = {
   result: {
     total: '', next: '', operation: '',
   },
+  total: '',
+  next: '',
 };
 
 Display.propTypes = {
-  result: {
-    total: PropTypes.string,
-    next: PropTypes.string,
-    operation: PropTypes.string,
-  },
+  result: PropTypes.func,
+  total: PropTypes.string,
+  next: PropTypes.string,
 };
 
 export default Display;

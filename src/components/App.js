@@ -18,6 +18,7 @@ class App extends React.Component {
 
   clickHandler(buttonName) {
     this.setState(state => calculate(state, buttonName));
+    console.log(this.state);
   }
 
   render() {

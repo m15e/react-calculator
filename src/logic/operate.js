@@ -9,7 +9,7 @@ const operate = (numberOne, numberTwo, operation) => {
     res = a.times(b);
   } if (operation === '÷') {
     if (b === 0) {
-      res = 'Zero division not permitted!';
+      res = 'Error: Zero division not permitted!';
     } else {
       res = a.div(b);
     }
