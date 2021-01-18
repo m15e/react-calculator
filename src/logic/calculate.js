@@ -1,34 +1,65 @@
 import operate from './operate';
 
 const calculate = (calculatorData, buttonName) => {
-  const dataUpdate = { ...calculatorData };
+  let { total, next, operation } = calculatorData;
+  const nums = ['.'] + [...Array(10).keys()].map(String);
 
   if (buttonName === 'AC') {
-    dataUpdate.total = null;
-    dataUpdate.next = null;
-    dataUpdate.operation = null;
+    total = null;
+    next = null;
+    operation = null;
   }
 
   if (buttonName === '+/-') {
-    dataUpdate.total *= -1;
-    if (dataUpdate.next) { dataUpdate.next *= -1; }
+    total *= -1;
+    if (next) { next *= -1; }
   }
 
   if (buttonName === '%') {
-    if (!dataUpdate.next) {
-      dataUpdate.total = operate(dataUpdate.total, 100, '÷');
+    if (!next) {
+      total = operate(total, 100, '÷');
     }
   }
 
-  if (!dataUpdate.operation && (buttonName === 'X' || buttonName === '÷' || buttonName === '+' || buttonName === '-')) {
-    dataUpdate.operation = buttonName;
+  if (total && !operation && (buttonName === 'X' || buttonName === '÷' || buttonName === '+' || buttonName === '-')) {
+    operation = buttonName;
   }
 
-  if (buttonName === '=' && dataUpdate.next) {
-    dataUpdate.total = operate(dataUpdate.total, dataUpdate.next, dataUpdate.operation);
+  if (next && operation && (buttonName === '%')) {
+    if (operation.length < 2) {
+      operation += buttonName;
+    }
   }
 
-  return dataUpdate;
+  if (buttonName === '=' && next) {
+    if (operation.length === 2) {
+      next = operate(next, 100, '÷');
+      next = operate(total, next, 'X');
+      total = operate(total, next, operation[0]);
+    } else {
+      total = operate(total, next, operation);
+    }
+    operation = null;
+    next = null;
+  }
+
+  if (nums.includes(buttonName)) {
+    if (total && !operation) {
+      total += buttonName;
+    }
+    if (!total) {
+      total = buttonName;
+    }
+    if (operation) {
+      if (!next) {
+        next = buttonName;
+      } else {
+        next += buttonName;
+      }
+    }
+  }
+  const state = { total, next, operation };
+  return state;
 };
 
 export default calculate;
