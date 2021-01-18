@@ -1,19 +1,31 @@
 import PropTypes from 'prop-types';
 
-const Display = props => {
-  const { result } = props;
+const Display = ({ result }) => {
+  const { total, next, operation } = result;
+  // console.log(data.total, data.next, data.operation);
+  console.log('from display');
+  console.log(result);
   return (
     <div className="display">
-      <span className="display-content">
-        {result}
-      </span>
+      <p>{`total: ${total}`}</p>
+      <p>{`next: ${next}`}</p>
+      <p>{`op: ${operation}`}</p>
     </div>
   );
 };
 
-Display.defaultProps = { result: '0' };
+Display.defaultProps = {
+  result: {
+    total: '', next: '', operation: '',
+  },
+};
+
 Display.propTypes = {
-  result: PropTypes.string,
+  result: {
+    total: PropTypes.string,
+    next: PropTypes.string,
+    operation: PropTypes.string,
+  },
 };
 
 export default Display;

@@ -17,15 +17,17 @@ class App extends React.Component {
   }
 
   clickHandler(buttonName) {
-    console.log(buttonName);
+    console.log(`clicked: ${buttonName}`);
     this.setState(state => calculate(state, buttonName));
+    console.log('post set:');
+    console.log(this.state);
   }
 
   render() {
     const { total, next, operation } = this.state;
     return (
       <>
-        <Display result={(total, next, operation)} />
+        <Display result={{ total, next, operation }} />
         <ButtonPanel clickFunc={this.clickHandler} />
       </>
     );

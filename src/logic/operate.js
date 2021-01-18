@@ -2,17 +2,22 @@ import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
   let res;
+  const a = new Big(parseFloat(numberOne));
+  const b = parseFloat(numberTwo);
+
   if (operation === 'X') {
-    res = Big(numberOne) * Big(numberTwo);
+    res = a.times(b);
   } if (operation === '÷') {
-    res = Big(numberOne) / Big(numberTwo);
+    res = a.div(b);
   } if (operation === '+') {
-    res = Big(numberOne) + Big(numberTwo);
+    res = a.plus(b);
   } if (operation === '-') {
-    res = Big(numberOne) - Big(numberTwo);
+    res = a.minus(b);
   }
 
-  return res;
+  const resultStr = res.toString();
+
+  return resultStr;
 };
 
 export default operate;
