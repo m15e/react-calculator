@@ -10,6 +10,10 @@ const calculate = (calculatorData, buttonName) => {
     operation = null;
   }
 
+  if (total === 'Error: Zero division not permitted!') {
+    total = null;
+  }
+
   if (buttonName === '+/-') {
     total *= -1;
     if (next) { next *= -1; }
