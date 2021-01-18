@@ -17,7 +17,6 @@ class App extends React.Component {
   }
 
   clickHandler(buttonName) {
-    console.log(`clicked: ${buttonName}`);
     this.setState(state => calculate(state, buttonName));
   }
 

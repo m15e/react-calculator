@@ -37,7 +37,3 @@ ButtonPanel.propTypes = {
 };
 
 export default ButtonPanel;
-
-/* <div className='btn-group'>
-  <Button buttonName={el} clickHandler={props.clickHandler} />
-</div>; */
