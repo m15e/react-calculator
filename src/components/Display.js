@@ -1,15 +1,13 @@
 import PropTypes from 'prop-types';
 
 const Display = ({ result }) => {
-  const { total, next, operation } = result;
-  // console.log(data.total, data.next, data.operation);
-  console.log('from display');
+  const { total, next } = result;
+  const res = (total) ? `${total}` : '0';
+  const displayContent = (next) ? `${next}` : res;
   console.log(result);
   return (
     <div className="display">
-      <p>{`total: ${total}`}</p>
-      <p>{`next: ${next}`}</p>
-      <p>{`op: ${operation}`}</p>
+      <p className="display-content">{ displayContent }</p>
     </div>
   );
 };

@@ -10,7 +10,7 @@ const ButtonPanel = props => {
     rowFive: ['0', '.', '='],
   };
 
-  const { clickFunc } = props;
+  const { clickHandler } = props;
   return (
     <div>
       {
@@ -21,7 +21,7 @@ const ButtonPanel = props => {
                 <Button
                   key={button}
                   buttonName={button}
-                  clickFunc={clickFunc}
+                  clickHandler={clickHandler}
                 />
               ))
             }
@@ -33,11 +33,11 @@ const ButtonPanel = props => {
 };
 
 ButtonPanel.propTypes = {
-  clickFunc: PropTypes.func.isRequired,
+  clickHandler: PropTypes.func.isRequired,
 };
 
 export default ButtonPanel;
 
 /* <div className='btn-group'>
-  <Button buttonName={el} clickFunc={props.clickFunc} />
+  <Button buttonName={el} clickHandler={props.clickHandler} />
 </div>; */

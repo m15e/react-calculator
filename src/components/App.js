@@ -19,8 +19,6 @@ class App extends React.Component {
   clickHandler(buttonName) {
     console.log(`clicked: ${buttonName}`);
     this.setState(state => calculate(state, buttonName));
-    console.log('post set:');
-    console.log(this.state);
   }
 
   render() {
@@ -28,7 +26,7 @@ class App extends React.Component {
     return (
       <>
         <Display result={{ total, next, operation }} />
-        <ButtonPanel clickFunc={this.clickHandler} />
+        <ButtonPanel clickHandler={this.clickHandler} />
       </>
     );
   }
