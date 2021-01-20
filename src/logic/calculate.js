@@ -20,6 +20,9 @@ const calculate = (calculatorData, buttonName) => {
   }
 
   if (buttonName === '%') {
+    if (total === null) {
+      total = 0;
+    }
     if (!next) {
       total = operate(total, 100, '÷');
     }
