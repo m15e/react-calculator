@@ -1,9 +1,11 @@
 import React from 'react';
+import Header from './Header';
 
 const Quote = () => (
-  <div>
+  <>
+    <Header />
     <h1>Hi from Quote</h1>
-  </div>
+  </>
 );
 
 export default Quote;
