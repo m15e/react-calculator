@@ -34,19 +34,35 @@ img {
   height: auto;
 }
 
+.app-container {
+  width: 700px;
+  margin: 10vh auto;
+}
+
 .display {
-  color: #000;
+  color: #fff;
+  height: 100px;
   text-align: right;
+  font-size: 70px;
+  padding: 7px 20px;
+  font-weight: bold;
+  background-color: #848693;
 }
 
 .btn-group {
   display: flex;
+  height: 100px;
 }
 
 .btn-group button {
   width: 100%;
+  font-size: 20px;
 }
 
-.btn-group:last-of-type button:first-of-type {
-  width: 215%;
+.btn-group .wide {
+  width: 207.5%;
+}
+
+button {
+  border-color: #fff;
 }

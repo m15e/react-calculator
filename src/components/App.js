@@ -18,10 +18,10 @@ const App = () => {
   const { total, next, operation } = state;
 
   return (
-    <>
+    <div className="app-container">
       <Display result={{ total, next, operation }} />
       <ButtonPanel clickHandler={clickHandler} />
-    </>
+    </div>
   );
 };
 
