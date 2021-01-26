@@ -9,6 +9,10 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  background-color: rgb(21, 32, 43);
+}
+
 body,
 h1,
 h2,
@@ -34,19 +38,54 @@ img {
   height: auto;
 }
 
+.app-container {
+  width: 700px;
+  margin: 0 auto;
+}
+
 .display {
-  color: #000;
+  color: #fff;
+  height: 100px;
   text-align: right;
+  font-size: 70px;
+  padding: 7px 20px;
+  font-weight: bold;
+  background-color: #848693;
 }
 
 .btn-group {
   display: flex;
+  height: 100px;
 }
 
 .btn-group button {
   width: 100%;
+  font-size: 20px;
 }
 
-.btn-group:last-of-type button:first-of-type {
-  width: 215%;
+.btn-group .wide {
+  width: 207.5%;
+}
+
+button {
+  border-color: #fff;
+}
+
+.header-container ul {
+  display: flex;
+  padding: 4rem;
+}
+
+.header-container li {
+  margin-right: 2rem;
+}
+
+.header-container li a {
+  color: #00b3ff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.header-container li a:hover {
+  opacity: 0.7;
 }
