@@ -1,9 +1,9 @@
-import '../App.css';
+import '../../App.css';
 import React, { useState } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
-import calculate from '../logic/calculate';
-import Header from './Header';
+import calculate from '../../logic/calculate';
+import Header from '../header/Header';
 
 const App = () => {
   const [state, setState] = useState({
