@@ -58,6 +58,10 @@ img {
   height: 100px;
 }
 
+button {
+  border-color: #fff;
+}
+
 .btn-group button {
   width: 100%;
   font-size: 20px;
@@ -65,10 +69,6 @@ img {
 
 .btn-group .wide {
   width: 207.5%;
-}
-
-button {
-  border-color: #fff;
 }
 
 .header-container ul {
