@@ -1,15 +1,15 @@
 import calculate from '../calculate';
 
-test("AC button sets all values to null", () => {
+test('AC button sets all values to null', () => {
   const calcData = {
     total: '55',
     next: '12',
-    operation: '-'
+    operation: '-',
   };
 
   const res = {
     total: null,
-    next:  null,
+    next: null,
     operation: null,
   };
 
@@ -25,7 +25,7 @@ test('+/- flips sign of total and next', () => {
 
   const res = {
     total: -55,
-    next:  12,
+    next: 12,
     operation: null,
   };
 
@@ -41,7 +41,7 @@ test('% divides total by 100 if next is falsy', () => {
 
   const res = {
     total: '1',
-    next:  null,
+    next: null,
     operation: null,
   };
 
@@ -57,7 +57,7 @@ test('% changes operation to +% if next has a value', () => {
 
   const res = {
     total: '100',
-    next:  '10',
+    next: '10',
     operation: '+%',
   };
 
@@ -73,7 +73,7 @@ test('% changes operation to -% if next has a value', () => {
 
   const res = {
     total: '100',
-    next:  '10',
+    next: '10',
     operation: '-%',
   };
 
@@ -89,7 +89,7 @@ test('= correctly calculates sum', () => {
 
   const res = {
     total: '110',
-    next:  null,
+    next: null,
     operation: null,
   };
 
@@ -105,7 +105,7 @@ test('= correctly calculates subtraction', () => {
 
   const res = {
     total: '90',
-    next:  null,
+    next: null,
     operation: null,
   };
 
@@ -121,7 +121,7 @@ test('= correctly calculates multiplication', () => {
 
   const res = {
     total: '1000',
-    next:  null,
+    next: null,
     operation: null,
   };
 
@@ -137,10 +137,9 @@ test('= correctly calculates division', () => {
 
   const res = {
     total: '10',
-    next:  null,
+    next: null,
     operation: null,
   };
 
   expect(calculate(calcData, '=')).toEqual(res);
 });
-

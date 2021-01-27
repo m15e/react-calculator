@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Quote component matches snapshot 1`] = `
+Array [
+  <div
+    className="header-container"
+  >
+    <ul>
+      <li>
+        <a
+          href="/"
+        >
+          Math Magicians
+        </a>
+      </li>
+      <li>
+        <a
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          href="/calculator"
+        >
+          Calculator
+        </a>
+      </li>
+      <li>
+        <a
+          href="/quote"
+        >
+          Quote
+        </a>
+      </li>
+    </ul>
+  </div>,
+  <div
+    className="content-container"
+  >
+    <h2>
+      Quote of the day
+    </h2>
+    <p>
+      What if I fall? Oh, but my darling, what if you fly?
+    </p>
+    <span>
+      - Winnie the Pooh
+    </span>
+  </div>,
+]
+`;

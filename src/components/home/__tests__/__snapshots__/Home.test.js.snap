@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component matches snapshot 1`] = `
+Array [
+  <div
+    className="header-container"
+  >
+    <ul>
+      <li>
+        <a
+          href="/"
+        >
+          Math Magicians
+        </a>
+      </li>
+      <li>
+        <a
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          href="/calculator"
+        >
+          Calculator
+        </a>
+      </li>
+      <li>
+        <a
+          href="/quote"
+        >
+          Quote
+        </a>
+      </li>
+    </ul>
+  </div>,
+  <div
+    className="content-container"
+  >
+    <h2>
+      Welcome to our Math Magicians!
+    </h2>
+    <p>
+      A calculator built with React! Click the "Calculator" link above to check it out.
+    </p>
+  </div>,
+]
+`;
